@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css"
+import Layout from '../layouts/Layout.astro'
+import Lanyard from '../components/React/Lanyard.tsx'
+import SectionContainer from "../components/SectionContainer.astro"
+import Hero from "../components/Hero.astro"
+import About from "../components/About.astro"
 ---
 
 <Layout>
-	<Welcome />
+	<main class="px-6">
+		<!-- <Lanyard client:only="react" /> -->
+		<SectionContainer>
+			<Hero />
+		</SectionContainer>
+
+		<SectionContainer id="about">
+			<About />
+		</SectionContainer>
+	</main>
 </Layout>
