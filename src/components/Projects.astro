@@ -1,0 +1,178 @@
+---
+import ProjectsIcon from "./icons/ProjectsIcon.astro"
+import SocialBadge from "./SocialBadge.astro"
+import PreviewIcon from "./icons/PreviewIcon.astro"
+import GitHubIcon from "./icons/GitHubIcon.astro"
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
+import PHPIcon from "./icons/PHPIcon.astro"
+import HTMLIcon from "./icons/HTMLIcon.astro"
+import CSSIcon from "./icons/CSSIcon.astro"
+import CSharpIcon from "./icons/CSharpIcon.astro"
+import UnityIcon from "./icons/UnityIcon.astro"
+import AsepriteIcon from "./icons/AsepriteIcon.astro"
+import TailwindIcon from "./icons/TailwindIcon.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
+import MySQLIcon from "./icons/MySQLIcon.astro"
+import WebGLIcon from "./icons/WebGLIcon.astro"
+import ThreejsIcon from "./icons/ThreejsIcon.astro"
+
+const TAGS = {
+    JAVACRIPT: {
+        name: "JavaScript",
+        class: "bg-black text-white dark:bg-[#fff56e] dark:text-black",
+        icon: JavaScriptIcon,
+    },
+    PHP: {
+        name: "PHP",
+        class: "bg-[#787cb4] text-white",
+        icon: PHPIcon,
+    },
+    HTML: {
+        name: "HTML5",
+        class: "bg-[#ca370c] text-white dark:bg-[#ef7f34] dark:text-black",
+        icon: HTMLIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#0f2267] text-white dark:bg-[#7a96ff] dark:text-black",
+        icon: CSSIcon,
+    },
+    CSHARP: {
+        name: "C#",
+        class: "bg-[#623ba1] text-white",
+        icon: CSharpIcon,
+    },
+    UNITY: {
+        name: "Unity",
+        class: "bg-[#222c37] text-white",
+        icon: UnityIcon,
+    },
+    ASEPRITE: {
+        name: "Aseprite",
+        class: "bg-[#583e46] text-white",
+        icon: AsepriteIcon,
+    },
+    WEBGL: {
+        name: "WebGL",
+        class: "bg-[#931821] text-white",
+        icon: WebGLIcon,
+    },
+    THREEJS: {
+        name: "Three.js",
+        class: "bg-black text-white",
+        icon: ThreejsIcon,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "bg-[#003159] text-white",
+        icon: TailwindIcon,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-[#087EA4] text-white",
+        icon: ReactIcon,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-[#0e0e0e] text-white",
+        icon: AstroIcon,
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-[#00718b] text-white",
+        icon: MySQLIcon,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: "Aprendefacil",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        code: "https://github.com/emanuelghdev/aprendefacil",
+        image: "src/assets/Projects/Aprendefacil.png",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
+        direction: "md:flex-row",
+    },
+    {
+        title: "Una Habitación Propia",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        code: "https://github.com/emanuelghdev/aprendefacil",
+        link: "https://refrandle.es/",
+        image: "src/assets/Projects/Una_habitacion_propia.png",
+        tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.ASEPRITE],
+        direction: "md:flex-row-reverse",
+    },
+    {
+        title: "Palestine Support Badges",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        code: "https://github.com/emanuelghdev/aprendefacil",
+        link: "https://refrandle.es/",
+        image: "src/assets/Projects/Palestine_badges.png",
+        tags: [TAGS.JAVACRIPT, TAGS.REACT, TAGS.TAILWIND],
+        direction: "md:flex-row",
+    },
+    {
+        title: "The Dim Room",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        code: "https://github.com/emanuelghdev/aprendefacil",
+        link: "https://refrandle.es/",
+        image: "src/assets/Projects/The_dim_room.png",
+        tags: [TAGS.JAVACRIPT, TAGS.THREEJS, TAGS.WEBGL],
+        direction: "md:flex-row-reverse",
+    },
+    {
+        title: "Refrandle",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        code: "https://github.com/emanuelghdev/aprendefacil",
+        link: "https://refrandle.es/",
+        image: "src/assets/Projects/Refrandle.png",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
+        direction: "md:flex-row",
+    },
+]
+---
+
+<div class="pt-6 pb-4 lg:pt-10 lg:pb-8">
+    <h2 class="flex items-center justify-center gap-x-4 text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+        <ProjectsIcon class="size-16 lg:size-20" />Featured Projects
+    </h2>
+</div>
+
+<div class="flex flex-col gap-y-16 md:gap-y-20">
+    {PROJECTS.map(({ direction, image, title, description, tags, link, code }) => (
+        <article class={`flex flex-col space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:cursor-pointer md:hover:-translate-y-3 transition duration-500 ease-in-out`}>
+            <div class="w-full md:w-1/2">
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                    <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top-left w-full h-full transition duration-500" loading="lazy" src={image} />
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 md:max-w-lg">
+                <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
+                <div class="flex flex-wrap mt-2">
+                    <ul class="flex flex-wrap mb-2 gap-2">
+                        {tags.map((tag) => (
+                            <li>
+                                <span class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-[6px] px-2 `}>
+                                    <tag.icon class="size-4" />
+                                    {tag.name}
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <div class="mt-2 text-gray-700 text-pretty dark:text-gray-400">{description}</div>
+                    <footer class="flex items-end justify-start mt-4 gap-x-4">
+                        {code && (
+                            <SocialBadge href={code}><GitHubIcon class="size-6" />Code</SocialBadge>
+                        )}
+                        {link && (
+                            <SocialBadge href={link}><PreviewIcon class="size-6" />Preview</SocialBadge>
+                        )}
+                    </footer>
+                </div>
+            </div>
+        </article>
+    ))}
+</div>
