@@ -1,6 +1,6 @@
 ---
 import ProjectsIcon from "./icons/ProjectsIcon.astro"
-import SocialBadge from "./SocialBadge.astro"
+import SocialButton from "./SocialButton.astro"
 import PreviewIcon from "./icons/PreviewIcon.astro"
 import GitHubIcon from "./icons/GitHubIcon.astro"
 import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
@@ -12,10 +12,12 @@ import UnityIcon from "./icons/UnityIcon.astro"
 import AsepriteIcon from "./icons/AsepriteIcon.astro"
 import TailwindIcon from "./icons/TailwindIcon.astro"
 import ReactIcon from "./icons/ReactIcon.astro"
+import ViteIcon from "./icons/ViteIcon.astro"
 import AstroIcon from "./icons/AstroIcon.astro"
 import MySQLIcon from "./icons/MySQLIcon.astro"
 import WebGLIcon from "./icons/WebGLIcon.astro"
 import ThreejsIcon from "./icons/ThreejsIcon.astro"
+import RolIcon from "./icons/RolIcon.astro"
 
 const TAGS = {
     JAVACRIPT: {
@@ -73,6 +75,11 @@ const TAGS = {
         class: "bg-[#087EA4] text-white",
         icon: ReactIcon,
     },
+    VITE: {
+        name: "Vite",
+        class: "bg-[#2d2348] text-white",
+        icon: ViteIcon,
+    },
     ASTRO: {
         name: "Astro",
         class: "bg-[#0e0e0e] text-white",
@@ -88,46 +95,56 @@ const TAGS = {
 const PROJECTS = [
     {
         title: "Aprendefacil",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
+        description: "Piloto de una plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas y comunicación directa con los educadores.",
+        info: "⭐ Piloto de una licitación que acabámos ganando",
         code: "https://github.com/emanuelghdev/aprendefacil",
         image: "src/assets/Projects/Aprendefacil.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
+        rol: "Auditor de Accesibilidad / Backend Developer",
         direction: "md:flex-row",
     },
     {
         title: "Una Habitación Propia",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
-        code: "https://github.com/emanuelghdev/aprendefacil",
-        link: "https://refrandle.es/",
+        description: "Juego pixel art 2D de gestión emocional y granjas enfocado en la mejora de los problemas producidos por la ansiedad y el estrés. Cuenta con árbol de diálogos, sistema de progreso, NPCs con arcos narrativos, misiones secundarias y algunas sorpresas.",
+        info: "🎯 Trabajo final de carrera calificado con la máxima nota",
+        code: "https://github.com/emanuelghdev/una-habitacion-propia",
+        link: "https://emanuelgh.itch.io/una-habitacion-propia",
         image: "src/assets/Projects/Una_habitacion_propia.png",
         tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.ASEPRITE],
+        rol: "Solo Developer",
         direction: "md:flex-row-reverse",
     },
     {
         title: "Palestine Support Badges",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
-        code: "https://github.com/emanuelghdev/aprendefacil",
-        link: "https://refrandle.es/",
+        description: "Herramienta web para crear badges de apoyo a Palestina personalizables, con diferentes estilos, colores, textos e iconos. Permite exportar los badges en formatos como URL, Markdown, HTML o PNG listos para usar.",
+        info: "🍉 Proyecto perteneciente a la iniciativa Tech4Palestine",
+        code: "https://github.com/emanuelghdev/palestine-support-badges",
+        link: "https://emanuelghdev.github.io/palestine-support-badges/",
         image: "src/assets/Projects/Palestine_badges.png",
         tags: [TAGS.JAVACRIPT, TAGS.REACT, TAGS.TAILWIND],
+        rol: "Teach Lead",
         direction: "md:flex-row",
     },
     {
         title: "The Dim Room",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
-        code: "https://github.com/emanuelghdev/aprendefacil",
-        link: "https://refrandle.es/",
+        description: "Escape Room interactivo que transcurre en una pequeña habitación 3D hecha desde cero. El usuario puede explorar la escena llena de detalles, interactuar con los objetos e intentar descubrir todas las pistas necesarias para salir de la habitación.",
+        info: "💡 Escena con +25 objetos distintos modelados",
+        code: "https://github.com/emanuelghdev/the-dim-room",
+        link: "https://emanuelghdev.github.io/the-dim-room/",
         image: "src/assets/Projects/The_dim_room.png",
         tags: [TAGS.JAVACRIPT, TAGS.THREEJS, TAGS.WEBGL],
+        rol: "Solo Developer",
         direction: "md:flex-row-reverse",
     },
     {
         title: "Refrandle",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas, rutinas flexibles y comunicación directa con los educadores.",
-        code: "https://github.com/emanuelghdev/aprendefacil",
+        description: "Juego online de adivinar refranes y dichos populares en español. Incluye estadísticas detalladas, historial de partidas y hasta cuatro modos de juego distintos para mejorar la experiencia del usuario y ajustar la dificultad del reto.",
+        info: "📈 Web app con +20.000 partidas jugadas",
+        code: "https://github.com/emanuelghdev/refrandle",
         link: "https://refrandle.es/",
         image: "src/assets/Projects/Refrandle.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
+        rol: "Solo Developer",
         direction: "md:flex-row",
     },
 ]
@@ -140,10 +157,26 @@ const PROJECTS = [
 </div>
 
 <div class="flex flex-col gap-y-16 md:gap-y-20">
-    {PROJECTS.map(({ direction, image, title, description, tags, link, code }) => (
-        <article class={`flex flex-col space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:cursor-pointer md:hover:-translate-y-3 transition duration-500 ease-in-out`}>
-            <div class="w-full md:w-1/2">
+    {PROJECTS.map(({ direction, info, image, title, description, tags, link, code, rol }) => (
+        <article role="button" tabindex="0" aria-haspopup="dialog" class={`flex flex-col gap-4 space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:-translate-y-4 transition duration-500 ease-in-out js-project`}>
+            <div class="w-full md:w-1/2 m-0">
                 <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                    <span class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 rounded-full backdrop-blur-sm">
+                        <span class="px-2 py-1 bg-black/50  border border-white/20 text-white text-sm font-medium rounded-full">
+                            {info}
+                        </span>
+                    </span>
+                    
+                    <span class="absolute bottom-9 left-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-200 rounded-full backdrop-blur-sm">
+                        <span
+                            class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700 dark:text-indigo-100 ring-1 ring-indigo-200 dark:ring-indigo-700 max-w-fit"
+                            aria-label="Rol: Auditor de Accesibilidad / Backend Developer"
+                            title="Rol: Auditor de Accesibilidad / Backend Developer"
+                        >
+                            <RolIcon class="size-5" />{rol}
+                        </span>
+                    </span>
+
                     <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top-left w-full h-full transition duration-500" loading="lazy" src={image} />
                 </div>
             </div>
@@ -165,10 +198,10 @@ const PROJECTS = [
                     <div class="mt-2 text-gray-700 text-pretty dark:text-gray-400">{description}</div>
                     <footer class="flex items-end justify-start mt-4 gap-x-4">
                         {code && (
-                            <SocialBadge href={code}><GitHubIcon class="size-6" />Code</SocialBadge>
+                            <SocialButton href={code}><GitHubIcon class="size-6" />Code</SocialButton>
                         )}
                         {link && (
-                            <SocialBadge href={link}><PreviewIcon class="size-6" />Preview</SocialBadge>
+                            <SocialButton href={link}><PreviewIcon class="size-6" />Preview</SocialButton>
                         )}
                     </footer>
                 </div>
