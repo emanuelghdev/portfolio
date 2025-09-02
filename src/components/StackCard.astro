@@ -1,0 +1,15 @@
+---
+interface Props {
+    colorIcon?: string
+    name?: string
+}
+
+const {colorIcon = "", name } =Astro.props
+---
+
+<div class="group relative">
+    <div class="bg-white dark:bg-gray-800 rounded-xl py-4 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2">
+        <div class=`flex justify-center text-4xl mb-3 text-center ${colorIcon} overflow-visible`><slot></slot></div>
+        <h3 class="font-semibold text-gray-900 dark:text-white text-center">{name}</h3>
+    </div>
+</div>

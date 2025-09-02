@@ -6,18 +6,20 @@ import MailIcon from "./icons/MailIcon.astro"
 import ResumeIcon from "./icons/ResumeIcon.astro"
 ---
 
+<!-- Presentación -->
 <article class="flex flex-row items-center gap-x-6 mb-4 sm:mb-8 lg:mb-16 alig-center">
     <img class="rounded-full size-36 lg:size-44 xl:size-52 mb-4" src="src/assets/Photo.jpg" alt="Foto de Emanuel">
     <div class="flex flex-col items-center w-full sm:gap-y-4 lg:gap-y-6">
         <h1 class="text-[2.25rem] sm:text-5xl lg:text-7xl font-bold flex flex-row gap-x-4 lg:pb-2">
             Emanuel Giraldo
         </h1>
-        <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#00a3ff] dark:text-[#31d2f7] flex flex-row gap-x-4">
+        <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold bg-[linear-gradient(90deg,#00a3ff,#6978d1_55%,#945dd6)] bg-clip-text text-transparent dark:text-[#31d2f7] flex flex-row gap-x-4">
             Full Stack Developer
         </h1>
     </div>
 </article>
 
+<!-- Botones contacto -->
 <nav class="flex flex-wrap md:flex-row md:justify-center gap-x-2 lg:gap-x-4 gap-y-3 mt-4 lg:mt-8">
     <SocialButton href="mailto:emanuelghdev@gmail.com"><MailIcon class="size-6"/>Contáctame</SocialButton>
     <SocialButton href="https://www.linkedin.com/in/emanuelgh"><LinkedInIcon class="size-5"/>LinkedIn</SocialButton>

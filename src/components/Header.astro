@@ -11,6 +11,7 @@
 <style>
     @reference "../styles/global.css";
 
+    /* Estilo glassmorphism */
     .glass {
         @apply bg-white/20 border border-gray-900 rounded-full backdrop-blur-lg;
         -webkit-backdrop-filter: blur(16px);
@@ -23,7 +24,8 @@
             background-color: rgba(255,255,255,0.85);
         }
     }
-
+    
+    /* Estilo enlaces */
     a {
         @apply relative text-gray-800 hover:text-black transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full;
     }
