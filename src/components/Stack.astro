@@ -1,5 +1,5 @@
 ---
-import ProjectsIcon from "./icons/ProjectsIcon.astro"
+import StackIcon from "./icons/StackIcon.astro"
 import StackCard from "./StackCard.astro"
 import JavaScriptIcon from "./icons/JavaScriptIcon.astro"
 import TypeScriptIcon from "./icons/TypeScriptIcon.astro"
@@ -36,77 +36,94 @@ import SnykIcon from "./icons/SnykIcon.astro"
 import AzureIcon from "./icons/AzureIcon.astro"
 import ScrumIcon from "./icons/ScrumIcon.astro"
 import JiraIcon from "./icons/JiraIcon.astro"
-import CICDIcon from "./icons/CICDIcon.astro"
+import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 ---
 
 <!-- Header -->
 <header class="pt-6 pb-4 lg:pt-10 lg:pb-8">
     <h2 class="flex items-center justify-center gap-x-4 text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        <ProjectsIcon class="size-16 lg:size-20" />My Stack
+        <StackIcon class="size-16 lg:size-20" />My Stack
     </h2>
 </header>
 
 <!-- Stack Categories -->
 <div class="max-w-7xl mx-auto space-y-12">
     <!-- Backend -->
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800">
-        <h3 class="text-2xl font-bold text-blue-900 dark:text-blue-100 mb-6 text-center">Backend</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <StackCard name="PHP"><PHPIcon class="size-14 overflow-visible"/></StackCard>
-            <StackCard name="Python"><PythonIcon class="size-14"/></StackCard>
-            <StackCard name="Java"><JavaIcon class="size-14"/></StackCard>
-            <StackCard name="C#"><CSharpIcon class="size-14"/></StackCard>
-            <StackCard name="C++"><CPlusPlusIcon class="size-14"/></StackCard>
-            <StackCard name="Symfony"><SymfonyIcon class="size-14"/></StackCard>
-            <StackCard name="Flask"><FlaskIcon class="size-14"/></StackCard>
-            <StackCard colorIcon="text-[#00718b]" name="MySQL"><MySQLIcon class="size-14"/></StackCard>
+    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl 
+    px-3 py-5 sm:p-6 border border-blue-200 dark:border-blue-800">
+        <h3 class="text-3xl font-bold text-blue-900 dark:text-blue-100 mb-6 text-center">Backend</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+            <StackCard name="PHP"><PHPIcon class="size-10 overflow-visible"/></StackCard>
+            <StackCard name="Python"><PythonIcon class="size-10"/></StackCard>
+            <StackCard name="Java"><JavaIcon class="size-10"/></StackCard>
+            <StackCard name="C#"><CSharpIcon class="size-10"/></StackCard>
+            <StackCard name="C++"><CPlusPlusIcon class="size-10"/></StackCard>
+            <StackCard name="Symfony"><SymfonyIcon class="size-10"/></StackCard>
+            <StackCard name="Flask"><FlaskIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#00718b]" name="MySQL"><MySQLIcon class="size-10"/></StackCard>
         </div>
     </div>
 
     <!-- Frontend & Design -->
-    <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-6 border border-purple-200 dark:border-purple-800">
-        <h3 class="text-2xl font-bold text-purple-900 dark:text-purple-100 mb-6 text-center">Frontend & Design</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <StackCard name="JavaScript"><JavaScriptIcon class="size-14"/></StackCard>
-            <StackCard name="TypeScript"><TypeScriptIcon class="size-14"/></StackCard>
-            <StackCard name="HTML"><HTMLIcon class="size-14"/></StackCard>
-            <StackCard name="CSS"><CSSIcon class="size-14"/></StackCard>
-            <StackCard name="Dart"><DartIcon class="size-14"/></StackCard>
-            <StackCard colorIcon="text-[#087EA4]" name="React"><ReactIcon class="size-14"/></StackCard>
-            <StackCard name="Tailwind CSS"><TailwindIcon class="size-14"/></StackCard>
-            <StackCard colorIcon="text-[#000000]" name="Astro"><AstroIcon class="size-14"/></StackCard>
-            <StackCard name="Vite"><ViteIcon class="size-14"/></StackCard>
-            <StackCard colorIcon="text-[#931821]" name="WebGL"><WebGLIcon class="size-14"/></StackCard>
-            <StackCard name="Three.js"><ThreejsIcon class="size-14"/></StackCard>
-            <StackCard name="Chart.js"><ChartjsIcon class="size-14"/></StackCard>
-            <StackCard name="Flutter"><FlutterIcon class="size-14"/></StackCard>
-            <StackCard name="Figma"><FigmaIcon class="size-14"/></StackCard>
-            <StackCard name="Unity"><UnityIcon class="size-14"/></StackCard>
-            <StackCard name="Aseprite"><AsepriteIcon class="size-14"/></StackCard> 
+    <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl
+    px-3 py-5 sm:p-6 border border-purple-200 dark:border-purple-800">
+        <h3 class="text-3xl font-bold text-purple-900 dark:text-purple-100 mb-6 text-center">Frontend & Design</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+            <StackCard name="JavaScript"><JavaScriptIcon class="size-10"/></StackCard>
+            <StackCard name="TypeScript"><TypeScriptIcon class="size-10"/></StackCard>
+            <StackCard name="HTML"><HTMLIcon class="size-10"/></StackCard>
+            <StackCard name="CSS"><CSSIcon class="size-10"/></StackCard>
+            <StackCard name="Dart"><DartIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#087EA4]" name="React"><ReactIcon class="size-10"/></StackCard>
+            <StackCard name="Tailwind CSS"><TailwindIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#000000]" name="Astro"><AstroIcon class="size-10"/></StackCard>
+            <StackCard name="Vite"><ViteIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#931821]" name="WebGL"><WebGLIcon class="size-10"/></StackCard>
+            <StackCard name="Three.js"><ThreejsIcon class="size-10"/></StackCard>
+            <StackCard name="Chart.js"><ChartjsIcon class="size-10"/></StackCard>
+            <StackCard name="Flutter"><FlutterIcon class="size-10"/></StackCard>
+            <StackCard name="Figma"><FigmaIcon class="size-10"/></StackCard>
         </div>
     </div>
 
     <!-- DevOps -->
-    <div class="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800">
-        <h3 class="text-2xl font-bold text-green-900 dark:text-green-100 mb-6 text-center">DevOps</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <StackCard name="Git"><GitIcon class="size-14"/></StackCard>
-            <StackCard name="GitHub"><GitHubIcon class="size-14"/></StackCard>
-            <StackCard name="Linux"><LinuxIcon class="size-14"/></StackCard>
-            <StackCard name="Cloudflare"><CloudflareIcon class="size-14"/></StackCard>
-            <StackCard name="Microsoft Azure"><AzureIcon class="size-14"/></StackCard>
-            <StackCard name="Swagger"><SwaggerIcon class="size-14"/></StackCard>
-            <StackCard name="Snyk"><SnykIcon class="size-14"/></StackCard>
-            <StackCard name="CI/CD"><CICDIcon class="size-14"/></StackCard>
+    <div class="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl
+    px-3 py-5 sm:p-6 border border-green-200 dark:border-green-800">
+        <h3 class="text-3xl font-bold text-green-900 dark:text-green-100 mb-6 text-center">DevOps</h3>
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+            <StackCard name="Git"><GitIcon class="size-10"/></StackCard>
+            <StackCard name="GitHub"><GitHubIcon class="size-10"/></StackCard>
+            <StackCard name="CI/CD"><GitHubActionsIcon class="size-10"/></StackCard>
+            <StackCard name="Linux"><LinuxIcon class="size-10"/></StackCard>
+            <StackCard name="Cloudflare"><CloudflareIcon class="size-10"/></StackCard>
+            <StackCard name="Azure"><AzureIcon class="size-10"/></StackCard>
+            <StackCard name="Swagger"><SwaggerIcon class="size-10"/></StackCard>
+            <StackCard name="Snyk"><SnykIcon class="size-10"/></StackCard>
         </div>
     </div>
 
-    <!-- Managament -->
-    <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl p-6 border border-orange-200 dark:border-orange-800">
-        <h3 class="text-2xl font-bold text-orange-900 dark:text-orange-100 mb-6 text-center">Managament</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            <StackCard name="Scrum"><ScrumIcon class="size-14"/></StackCard>
-            <StackCard name="Jira"><JiraIcon class="size-14"/></StackCard>  
+    <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Game Dev -->
+        <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl
+        px-3 py-5 sm:p-6 border border-orange-200 dark:border-orange-800">
+            <h3 class="text-3xl font-bold text-orange-900 dark:text-orange-100 mb-6 text-center">Managament</h3>
+            <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
+                <StackCard name="Scrum"><ScrumIcon class="size-10"/></StackCard>
+                <StackCard name="Jira"><JiraIcon class="size-10"/></StackCard>  
+            </div>
+        </div>
+
+        <!-- Managament -->
+        <div class="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 rounded-2xl
+        px-3 py-5 sm:p-6 border border-yellow-200 dark:border-yellow-800">
+            <h3 class="text-3xl font-bold text-yellow-900 dark:text-amber-100 mb-6 text-center">Game Development</h3>
+            <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
+                <StackCard name="Unity"><UnityIcon class="size-10"/></StackCard>
+                <StackCard name="AGS"><AGSIcon class="size-10"/></StackCard>
+                <StackCard name="Aseprite"><AsepriteIcon class="size-10"/></StackCard> 
+            </div>
         </div>
     </div>
+
+    
 </div>
