@@ -95,17 +95,18 @@ const TAGS = {
 const PROJECTS = [
     {
         title: "Aprendefacil",
-        description: "Piloto de una plataforma web para el Colegio de Educación Especial San Rafael, destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas y comunicación directa con los educadores.",
+        description: "Plataforma web para el Colegio de Educación Especial San Rafael destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas y comunicación directa con los educadores.",
         info: "⭐ Piloto para una licitación que acabámos ganando",
         code: "https://github.com/emanuelghdev/aprendefacil",
         image: "src/assets/Projects/Aprendefacil.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
         rol: "Auditor de Accesibilidad / Backend Developer",
         direction: "md:flex-row",
+        fondo: "card-modern card-blue",
     },
     {
         title: "Una Habitación Propia",
-        description: "Juego pixel art 2D de gestión emocional y granjas enfocado en la mejora de los problemas producidos por la ansiedad y el estrés. Cuenta con árbol de diálogos, sistema de progreso, NPCs con arcos narrativos, misiones secundarias y algunas sorpresas.",
+        description: "Juego pixel art 2D de gestión emocional y granjas enfocado en la mejora de los problemas producidos por la ansiedad y el estrés. Cuenta con árbol de diálogos, sistema de progreso, NPCs con arcos narrativos y misiones secundarias.",
         info: "🎯 Trabajo final de carrera calificado con la máxima nota",
         code: "https://github.com/emanuelghdev/una-habitacion-propia",
         link: "https://emanuelgh.itch.io/una-habitacion-propia",
@@ -113,10 +114,11 @@ const PROJECTS = [
         tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.ASEPRITE],
         rol: "Full-Stack Developer",
         direction: "md:flex-row-reverse",
+        fondo: "card-modern card-purple",
     },
     {
         title: "Palestine Support Badges",
-        description: "Herramienta web para crear badges de apoyo a Palestina personalizables, con diferentes estilos, colores, textos e iconos. Permite exportar los badges en formatos como URL, Markdown, HTML o PNG listos para usar.",
+        description: "Herramienta web para crear badges de apoyo a Palestina personalizables con diferentes estilos, colores, textos e iconos. Permite exportar los badges en formatos como Markdown, HTML o PNG listos para usar.",
         info: "🍉 Proyecto perteneciente a la iniciativa Tech4Palestine",
         code: "https://github.com/emanuelghdev/palestine-support-badges",
         link: "https://emanuelghdev.github.io/palestine-support-badges/",
@@ -124,10 +126,11 @@ const PROJECTS = [
         tags: [TAGS.JAVACRIPT, TAGS.REACT, TAGS.TAILWIND],
         rol: "Teach Lead",
         direction: "md:flex-row",
+        fondo: "card-modern card-blue",
     },
     {
         title: "The Dim Room",
-        description: "Escape Room interactivo que transcurre en una pequeña habitación 3D hecha desde cero. El usuario puede explorar la escena llena de detalles, interactuar con los objetos e intentar descubrir todas las pistas necesarias para salir de la habitación.",
+        description: "Escape Room interactivo que transcurre en una pequeña habitación 3D hecha desde cero. El usuario puede explorar la escena, interactuar con los objetos e intentar descubrir todas las pistas necesarias para salir de la habitación.",
         info: "💡 Escena con +25 objetos distintos modelados",
         code: "https://github.com/emanuelghdev/the-dim-room",
         link: "https://emanuelghdev.github.io/the-dim-room/",
@@ -135,10 +138,11 @@ const PROJECTS = [
         tags: [TAGS.JAVACRIPT, TAGS.THREEJS, TAGS.WEBGL],
         rol: "Full-Stack Developer",
         direction: "md:flex-row-reverse",
+        fondo: "card-modern card-purple",
     },
     {
         title: "Refrandle",
-        description: "Juego online de adivinar refranes y dichos populares en español. Incluye estadísticas detalladas, historial de partidas y hasta cuatro modos de juego distintos para mejorar la experiencia del usuario y ajustar la dificultad del reto.",
+        description: "Juego online de adivinar refranes y dichos populares en español. Incluye estadísticas detalladas, historial de partidas y hasta cuatro modos de juego distintos para ajustar la experiencia.",
         info: "📈 Web app con +20.000 partidas jugadas",
         code: "https://github.com/emanuelghdev/refrandle",
         link: "https://refrandle.es/",
@@ -146,6 +150,7 @@ const PROJECTS = [
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
         rol: "Full-Stack Developer",
         direction: "md:flex-row",
+        fondo: "card-modern card-blue",
     },
 ]
 ---
@@ -158,30 +163,30 @@ const PROJECTS = [
 </header>
 
 <!-- Proyectos -->
-<div class="flex flex-col gap-y-16 md:gap-y-20">
-    {PROJECTS.map(({ direction, info, image, title, description, tags, link, code, rol }) => (
-        <article role="button" tabindex="0" aria-haspopup="dialog" class={`flex flex-col gap-4 space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:-translate-y-4 transition duration-500 ease-in-out js-project`}>
+<div class="flex flex-col gap-y-16 md:gap-y-14">
+    {PROJECTS.map(({ direction, fondo, info, image, title, description, tags, link, code, rol }) => (
+        <article class={`flex flex-col gap-4 justify-center space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out p-5 ${fondo}`}>
             <div class="w-full md:w-1/2 m-0">
 
                 {/* Imagen del proyecto */}
-                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
 
                     {/* Popup información adicional */}
-                    <span class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100 rounded-full backdrop-blur-sm z-10">
+                    <span class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100 rounded-full backdrop-blur-sm z-10">
                         <span class="px-2 py-1 bg-black/50  border border-white/20 text-white text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
                             {info}
                         </span>
                     </span>
 
                     {/* Popup rol en el proyecto */}
-                    <span class="absolute bottom-9 left-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-200 rounded-full backdrop-blur-sm z-10">
+                    <span class="absolute bottom-9 left-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 delay-200 rounded-full backdrop-blur-sm z-10">
                         <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700 dark:text-indigo-100 ring-1 ring-indigo-200 dark:ring-indigo-700 max-w-fit" aria-label="Rol en el proyecto">
                             <RolIcon class="size-5" />{rol}
                         </span>
                     </span>
 
                     {/* Imagen */}
-                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full transition duration-500" loading="lazy" src={image} />
+                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full" src={image} />
                 </div>
             </div>
 
@@ -202,7 +207,7 @@ const PROJECTS = [
                     </ul>
 
                     {/* Descripción */}
-                    <div class="mt-2 text-gray-700 text-pretty dark:text-gray-400">{description}</div>
+                    <div class="mt-1 text-gray-700 text-pretty dark:text-gray-400 pr-4">{description}</div>
 
                     {/* Botones */}
                     <footer class="flex items-end justify-start mt-4 gap-x-4">
@@ -218,3 +223,72 @@ const PROJECTS = [
         </article>
     ))}
 </div>
+
+<style>
+    @reference "../styles/global.css";
+
+    /* Estilo base de las cards */
+    .card-modern {
+        --from: rgba(255,255,255,0.65);
+        --to: rgba(255,255,255,0.45);
+        --accent: #00a3ff;
+
+        background-image: linear-gradient(90deg, var(--from), var(--to));
+        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative;
+
+        border: 1px solid rgba(15,23,42,0.05);
+    }
+
+    /* Franja superior delgada de las cards */
+    .card-modern::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 4px;
+        width: 40%;
+        background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), black 10%));
+        border-bottom-right-radius: 8px;
+        opacity: 0.95;
+    }
+
+    /* Card azul */
+    .card-blue {
+        --from: rgba(236,254,255,0.75);
+        --to: rgba(224,242,254,0.55);
+        
+    }
+
+    .card-blue:hover {
+        @apply  border border-blue-200 dark:border-blue-800;
+    }
+
+    .dark .card-blue {
+        --from: rgba(2,6,23,0.55);
+        --to: rgba(3,105,161,0.12);
+        --accent: #0891B2;
+    }
+
+    /* Card morado */
+    .card-purple {
+        --from: rgba(245,237,255,0.75);
+        --to: rgba(237,223,255,0.55);
+        --accent: #945dd6;
+    }
+
+    .card-purple:hover {
+        @apply border border-purple-200 dark:border-purple-700;
+    }
+
+    .dark .card-purple {
+        --from: rgba(2,6,23,0.55);
+        --to: rgba(139,92,246,0.15);
+        --accent: #9d6ae6;
+    }
+
+    .card-purple::before {
+        left: auto;
+        right: 0;
+        border-bottom-left-radius: 8px;
+    }
+</style>
