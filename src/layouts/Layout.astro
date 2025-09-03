@@ -15,6 +15,19 @@ import '@fontsource-variable/cabin'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Emanuel Giraldo - Full Stack Developer</title>
+
+		<script is:inline>
+			(function() {
+				const savedTheme = localStorage.getItem('theme')
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+				
+				if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+					document.documentElement.classList.add('dark')
+				} else {
+					document.documentElement.classList.remove('dark')
+				}
+			})();
+		</script>
 	</head>
 
 	<body class="relative text-black dark:text-white">

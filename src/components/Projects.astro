@@ -22,7 +22,7 @@ import RolIcon from "./icons/RolIcon.astro"
 const TAGS = {
     JAVACRIPT: {
         name: "JavaScript",
-        class: "bg-black text-white dark:bg-[#fff56e] dark:text-black",
+        class: "bg-black text-white",
         icon: JavaScriptIcon,
     },
     PHP: {
@@ -32,12 +32,12 @@ const TAGS = {
     },
     HTML: {
         name: "HTML5",
-        class: "bg-[#ca370c] text-white dark:bg-[#ef7f34] dark:text-black",
+        class: "bg-[#ca370c] text-white",
         icon: HTMLIcon,
     },
     CSS: {
         name: "CSS",
-        class: "bg-[#0f2267] text-white dark:bg-[#7a96ff] dark:text-black",
+        class: "bg-[#0f2267] text-white",
         icon: CSSIcon,
     },
     CSHARP: {
@@ -173,20 +173,20 @@ const PROJECTS = [
 
                     {/* Popup información adicional */}
                     <span class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100 rounded-full backdrop-blur-sm z-10">
-                        <span class="px-2 py-1 bg-black/50  border border-white/20 text-white text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
+                        <span class="px-2 py-1 bg-black/60  border border-white/20 text-white text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
                             {info}
                         </span>
                     </span>
 
                     {/* Popup rol en el proyecto */}
                     <span class="absolute bottom-9 left-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 delay-200 rounded-full backdrop-blur-sm z-10">
-                        <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800 dark:from-indigo-900 dark:via-indigo-800 dark:to-indigo-700 dark:text-indigo-100 ring-1 ring-indigo-200 dark:ring-indigo-700 max-w-fit" aria-label="Rol en el proyecto">
+                        <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800  max-w-fit" aria-label="Rol en el proyecto">
                             <RolIcon class="size-5" />{rol}
                         </span>
                     </span>
 
                     {/* Imagen */}
-                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full" src={image} />
+                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full group-hover:brightness-85 dark:group-hover:brightness-75 transition-all duration-200" src={image} />
                 </div>
             </div>
 
@@ -207,7 +207,7 @@ const PROJECTS = [
                     </ul>
 
                     {/* Descripción */}
-                    <div class="mt-1 text-gray-700 text-pretty dark:text-gray-400 pr-4">{description}</div>
+                    <div class="mt-1 text-gray-700 text-pretty dark:text-gray-200 pr-4">{description}</div>
 
                     {/* Botones */}
                     <footer class="flex items-end justify-start mt-4 gap-x-4">
@@ -234,7 +234,8 @@ const PROJECTS = [
         --accent: #00a3ff;
 
         background-image: linear-gradient(90deg, var(--from), var(--to));
-        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative;
+        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative
+        dark:hover:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.7),_0_2px_4px_-2px_rgba(255,255,255,0.6)];
 
         border: 1px solid rgba(15,23,42,0.05);
     }
@@ -260,10 +261,10 @@ const PROJECTS = [
     }
 
     .card-blue:hover {
-        @apply  border border-blue-200 dark:border-blue-800;
+        @apply  border border-blue-200 dark:border-cyan-800;
     }
 
-    .dark .card-blue {
+    :global(.dark) .card-blue {
         --from: rgba(2,6,23,0.55);
         --to: rgba(3,105,161,0.12);
         --accent: #0891B2;
@@ -277,10 +278,10 @@ const PROJECTS = [
     }
 
     .card-purple:hover {
-        @apply border border-purple-200 dark:border-purple-700;
+        @apply border border-purple-200 dark:border-violet-500;
     }
 
-    .dark .card-purple {
+    :global(.dark) .card-purple {
         --from: rgba(2,6,23,0.55);
         --to: rgba(139,92,246,0.15);
         --accent: #9d6ae6;

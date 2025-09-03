@@ -1,10 +1,17 @@
-<header class="glass fixed flex justify-center items-center px-6 py-4 w-fit mx-auto mt-4 lg:mt-6 shadow-[2px_3px_5px_0px_#add8e6] z-[99]">
+---
+import ThemeToggle from './React/ThemeToggle.tsx'
+---
+
+<header class="glass fixed flex justify-center items-center px-6 py-4 w-fit mx-auto mt-4 lg:mt-6 shadow-[2px_3px_5px_0px_#add8e6] dark:shadow-[2px_3px_5px_0px_rgba(120,119,198,0.3)] z-[99]">
     <nav class="flex flex-row gap-x-8 lg:gap-x-10">
         <a href="#top">Home</a>
         <a href="#about">About</a>
         <!-- <a href="#experience">Experience</a> -->
         <a href="#projects">Projects</a>
         <a href="#stack">Stack</a>
+        <span class="flex pb-[2px]">
+            <ThemeToggle client:load />
+        </span>
     </nav>
 </header>
 
@@ -13,7 +20,7 @@
 
     /* Estilo glassmorphism */
     .glass {
-        @apply bg-white/20 border border-gray-900 rounded-full backdrop-blur-lg;
+        @apply bg-white/20 dark:bg-black/20 border border-gray-900 rounded-full backdrop-blur-lg;
         -webkit-backdrop-filter: blur(16px);
         backdrop-filter: blur(16px);
     }
@@ -27,6 +34,6 @@
     
     /* Estilo enlaces */
     a {
-        @apply relative text-gray-800 hover:text-black transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full;
+        @apply relative text-gray-700 hover:text-black transition-colors duration-300 after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-300 hover:after:w-full dark:text-gray-200 dark:hover:text-white dark:after:bg-white;
     }
 </style>

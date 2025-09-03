@@ -58,7 +58,7 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
             <StackCard name="C#"><CSharpIcon class="size-10"/></StackCard>
             <StackCard name="C++"><CPlusPlusIcon class="size-10"/></StackCard>
             <StackCard name="Symfony"><SymfonyIcon class="size-10"/></StackCard>
-            <StackCard name="Flask"><FlaskIcon class="size-10"/></StackCard>
+            <StackCard name="Flask" colorIcon="text-black dark:text-white"><FlaskIcon class="size-10"/></StackCard>
             <StackCard colorIcon="text-[#00718b]" name="MySQL"><MySQLIcon class="size-10"/></StackCard>
         </div>
     </div>
@@ -74,9 +74,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
             <StackCard name="Dart"><DartIcon class="size-10"/></StackCard>
             <StackCard colorIcon="text-[#087EA4]" name="React"><ReactIcon class="size-10"/></StackCard>
             <StackCard name="Tailwind CSS"><TailwindIcon class="size-10"/></StackCard>
-            <StackCard colorIcon="text-[#000000]" name="Astro"><AstroIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#000000] dark:text-white" name="Astro"><AstroIcon class="size-10"/></StackCard>
             <StackCard name="Vite"><ViteIcon class="size-10"/></StackCard>
-            <StackCard colorIcon="text-[#931821]" name="WebGL"><WebGLIcon class="size-10"/></StackCard>
+            <StackCard colorIcon="text-[#931821] dark:text-white" name="WebGL"><WebGLIcon class="size-10"/></StackCard>
             <StackCard name="Three.js"><ThreejsIcon class="size-10"/></StackCard>
             <StackCard name="Chart.js"><ChartjsIcon class="size-10"/></StackCard>
             <StackCard name="Flutter"><FlutterIcon class="size-10"/></StackCard>
@@ -131,7 +131,8 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
         --accent: #00a3ff;
 
         background-image: linear-gradient(90deg, var(--from), var(--to));
-        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative;
+        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative
+        dark:hover:shadow-[0_4px_6px_-1px_rgba(229,231,235,0.72),_0_2px_4px_-2px_rgba(229,231,235,0.6)];
 
         border: 1px solid rgba(15,23,42,0.05);
     }
@@ -144,10 +145,10 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     }
 
     .card-blue:hover {
-        @apply  border border-blue-200 dark:border-blue-800;
+        @apply  border border-blue-200 dark:border-cyan-800;
     }
 
-    .dark .card-blue {
+    :global(.dark) .card-blue {
         --from: rgba(2,6,23,0.55);
         --to: rgba(3,105,161,0.12);
         --accent: #0891B2;
@@ -161,10 +162,10 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     }
 
     .card-purple:hover {
-        @apply border border-purple-200 dark:border-purple-700;
+        @apply border border-purple-200 dark:border-violet-500;
     }
 
-    .dark .card-purple {
+    :global(.dark) .card-purple {
         --from: rgba(2,6,23,0.55);
         --to: rgba(139,92,246,0.15);
         --accent: #9d6ae6;
@@ -184,14 +185,14 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
         border: 1px solid rgba(229,214,255,0.95); /* o el color que prefieras */
     }
 
-    .dark .cards-row > .card-blue:last-child {
+    :global(.dark) .cards-row > .card-blue:last-child {
         --from: rgba(2,6,23,0.55);
         --to: rgba(139,92,246,0.15);
         --accent: #9d6ae6;
     }
 
-    .dark .cards-row > .card-blue:last-child:hover {
-        border: 1px solid rgba(125,63,220,0.9);
+    :global(.dark) .cards-row > .card-blue:last-child:hover {
+        border: 1px solid rgb(142, 81, 255);
     }
 }
 </style>
