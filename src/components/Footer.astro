@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-8 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
+    <div class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 mb-2">
+        <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90">&copy; {currentYear}
+            <a href="#">Emanuel Giraldo Herrera</a>. Los logos y marcas registradas pertenecen a sus respectivos dueños.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0">
+            <li>
+                <a href="/#about" class="me-4 md:me-6">Sobre mí</a>
+            </li>
+            <li>
+                <a id="contacto" href="mailto:emanuelghdev@gmail.com">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+
+<style>
+    @reference "../styles/global.css";
+
+    /* Estilo enlaces */
+    a {
+        @apply relative text-gray-800 dark:text-zinc-200 hover:text-black dark:hover:text-white transition-colors duration-200 after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-black dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full;
+    }
+</style>
