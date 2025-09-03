@@ -46,13 +46,12 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     </h2>
 </header>
 
-<!-- Stack Categories -->
+<!-- Stack Subcategorías -->
 <div class="max-w-7xl mx-auto space-y-12">
     <!-- Backend -->
-    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl 
-    px-3 py-5 sm:p-6 border border-blue-200 dark:border-blue-800">
-        <h3 class="text-3xl font-bold text-blue-900 dark:text-blue-100 mb-6 text-center">Backend</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+    <div class="card-modern card-purple px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Backend</h3>
+        <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 ">
             <StackCard name="PHP"><PHPIcon class="size-10 overflow-visible"/></StackCard>
             <StackCard name="Python"><PythonIcon class="size-10"/></StackCard>
             <StackCard name="Java"><JavaIcon class="size-10"/></StackCard>
@@ -65,10 +64,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     </div>
 
     <!-- Frontend & Design -->
-    <div class="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl
-    px-3 py-5 sm:p-6 border border-purple-200 dark:border-purple-800">
-        <h3 class="text-3xl font-bold text-purple-900 dark:text-purple-100 mb-6 text-center">Frontend & Design</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+    <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Frontend & Design</h3>
+        <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8">
             <StackCard name="JavaScript"><JavaScriptIcon class="size-10"/></StackCard>
             <StackCard name="TypeScript"><TypeScriptIcon class="size-10"/></StackCard>
             <StackCard name="HTML"><HTMLIcon class="size-10"/></StackCard>
@@ -87,10 +85,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     </div>
 
     <!-- DevOps -->
-    <div class="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl
-    px-3 py-5 sm:p-6 border border-green-200 dark:border-green-800">
-        <h3 class="text-3xl font-bold text-green-900 dark:text-green-100 mb-6 text-center">DevOps</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+    <div class="card-modern card-purple px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">DevOps</h3>
+        <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8">
             <StackCard name="Git"><GitIcon class="size-10"/></StackCard>
             <StackCard name="GitHub"><GitHubIcon class="size-10"/></StackCard>
             <StackCard name="CI/CD"><GitHubActionsIcon class="size-10"/></StackCard>
@@ -102,21 +99,19 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
         </div>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-12">
-        <!-- Game Dev -->
-        <div class="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl
-        px-3 py-5 sm:p-6 border border-orange-200 dark:border-orange-800">
-            <h3 class="text-3xl font-bold text-orange-900 dark:text-orange-100 mb-6 text-center">Managament</h3>
+    <div class="flex flex-col lg:flex-row gap-12 cards-row">
+        <!-- Management -->
+        <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
+            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Management</h3>
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
                 <StackCard name="Scrum"><ScrumIcon class="size-10"/></StackCard>
                 <StackCard name="Jira"><JiraIcon class="size-10"/></StackCard>  
             </div>
         </div>
 
-        <!-- Managament -->
-        <div class="bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20 rounded-2xl
-        px-3 py-5 sm:p-6 border border-yellow-200 dark:border-yellow-800">
-            <h3 class="text-3xl font-bold text-yellow-900 dark:text-amber-100 mb-6 text-center">Game Development</h3>
+        <!-- Game Dev -->
+        <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
+            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Game Development</h3>
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
                 <StackCard name="Unity"><UnityIcon class="size-10"/></StackCard>
                 <StackCard name="AGS"><AGSIcon class="size-10"/></StackCard>
@@ -125,3 +120,78 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
         </div>
     </div>
 </div>
+
+<style>
+    @reference "../styles/global.css";
+
+    /* Estilo base de las cards */
+    .card-modern {
+        --from: rgba(255,255,255,0.65);
+        --to: rgba(255,255,255,0.45);
+        --accent: #00a3ff;
+
+        background-image: linear-gradient(90deg, var(--from), var(--to));
+        @apply rounded-2xl text-slate-800 dark:text-slate-100 transition-transform duration-200 ease-out overflow-hidden relative;
+
+        border: 1px solid rgba(15,23,42,0.05);
+    }
+
+    /* Card azul */
+    .card-blue {
+        --from: rgba(236,254,255,0.75);
+        --to: rgba(224,242,254,0.55);
+        z-index: 2;
+    }
+
+    .card-blue:hover {
+        @apply  border border-blue-200 dark:border-blue-800;
+    }
+
+    .dark .card-blue {
+        --from: rgba(2,6,23,0.55);
+        --to: rgba(3,105,161,0.12);
+        --accent: #0891B2;
+    }
+
+    /* Card morado */
+    .card-purple {
+        --from: rgba(245,237,255,0.75);
+        --to: rgba(237,223,255,0.55);
+        --accent: #945dd6;
+    }
+
+    .card-purple:hover {
+        @apply border border-purple-200 dark:border-purple-700;
+    }
+
+    .dark .card-purple {
+        --from: rgba(2,6,23,0.55);
+        --to: rgba(139,92,246,0.15);
+        --accent: #9d6ae6;
+    }
+
+    /* Override: en lg, la última .card-blue se comporta como .card-purple */
+    @media (max-width: 1024px) {
+    .cards-row > .card-blue:last-child {
+        /* valores morados (iguales a los de .card-purple) */
+        --from: rgba(245,237,255,0.75);
+        --to: rgba(237,223,255,0.55);
+        --accent: #945dd6;
+        z-index: 2;
+    }
+
+    .cards-row > .card-blue:last-child:hover {
+        border: 1px solid rgba(229,214,255,0.95); /* o el color que prefieras */
+    }
+
+    .dark .cards-row > .card-blue:last-child {
+        --from: rgba(2,6,23,0.55);
+        --to: rgba(139,92,246,0.15);
+        --accent: #9d6ae6;
+    }
+
+    .dark .cards-row > .card-blue:last-child:hover {
+        border: 1px solid rgba(125,63,220,0.9);
+    }
+}
+</style>
