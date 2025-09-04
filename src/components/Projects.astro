@@ -101,7 +101,7 @@ const PROJECTS = [
         image: "src/assets/Projects/Aprendefacil.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
         rol: "Auditor de Accesibilidad / Backend Developer",
-        direction: "md:flex-row",
+        direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
     {
@@ -113,7 +113,7 @@ const PROJECTS = [
         image: "src/assets/Projects/Una_habitacion_propia.png",
         tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.ASEPRITE],
         rol: "Full-Stack Developer",
-        direction: "md:flex-row-reverse",
+        direction: "lg:flex-row-reverse",
         fondo: "card-modern card-purple",
     },
     {
@@ -125,7 +125,7 @@ const PROJECTS = [
         image: "src/assets/Projects/Palestine_badges.png",
         tags: [TAGS.JAVACRIPT, TAGS.REACT, TAGS.TAILWIND],
         rol: "Teach Lead",
-        direction: "md:flex-row",
+        direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
     {
@@ -137,7 +137,7 @@ const PROJECTS = [
         image: "src/assets/Projects/The_dim_room.png",
         tags: [TAGS.JAVACRIPT, TAGS.THREEJS, TAGS.WEBGL],
         rol: "Full-Stack Developer",
-        direction: "md:flex-row-reverse",
+        direction: "lg:flex-row-reverse",
         fondo: "card-modern card-purple",
     },
     {
@@ -149,7 +149,7 @@ const PROJECTS = [
         image: "src/assets/Projects/Refrandle.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
         rol: "Full-Stack Developer",
-        direction: "md:flex-row",
+        direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
 ]
@@ -166,40 +166,40 @@ const PROJECTS = [
 <div class="flex flex-col gap-y-16 md:gap-y-14">
     {PROJECTS.map(({ direction, fondo, info, image, title, description, tags, link, code, rol }) => (
         <article class={`flex flex-col gap-4 justify-center space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out p-5 ${fondo}`}>
-            <div class="w-full md:w-1/2 m-0">
+            <div class="w-full lg:w-1/2 m-0">
 
                 {/* Imagen del proyecto */}
                 <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg overflow-clip rounded-xl sm:rounded-xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
 
                     {/* Popup información adicional */}
-                    <span class="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100 rounded-full backdrop-blur-sm z-10">
-                        <span class="px-2 py-1 bg-black/60  border border-white/20 text-white text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
+                    <span class="absolute bottom-3 left-3 opacity-0 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-300 delay-100 rounded-full backdrop-blur-sm z-10">
+                        <span class="px-2 py-1 bg-black/60 border border-white/20 text-white text-sm sm:text-base lg:text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
                             {info}
                         </span>
                     </span>
 
                     {/* Popup rol en el proyecto */}
-                    <span class="absolute bottom-9 left-3 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 delay-200 rounded-full backdrop-blur-sm z-10">
-                        <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800  max-w-fit" aria-label="Rol en el proyecto">
+                    <span class="absolute bottom-9 left-3 opacity-0 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-2 lg:group-hover:translate-y-0 transition-all duration-300 delay-200 rounded-full backdrop-blur-sm z-10">
+                        <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs sm:text-sm lg:text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800  max-w-fit" aria-label="Rol en el proyecto">
                             <RolIcon class="size-5" />{rol}
                         </span>
                     </span>
 
                     {/* Imagen */}
-                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full group-hover:brightness-85 dark:group-hover:brightness-75 transition-all duration-200" src={image} />
+                    <img alt="Imagen del proyecto" class="object-cover object-top-left w-full h-full lg:group-hover:brightness-85 lg:dark:group-hover:brightness-75 transition-all duration-200" src={image} />
                 </div>
             </div>
 
             {/* Descripción del proyecto */}
-            <div class="w-full md:w-1/2 md:max-w-lg">
-                <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
-                <div class="flex flex-wrap mt-2">
+            <div class="w-full lg:w-1/2 lg:max-w-lg">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-gray-100">{title}</h3>
+                <div class="flex flex-wrap mt-2 sm:mt-3 lg:mt-2">
                     {/* Tecnologías utilizadas */}
                     <ul class="flex flex-wrap mb-2 gap-2">
                         {tags.map((tag) => (
                             <li>
-                                <span class={`flex gap-x-2 rounded-lg text-xs ${tag.class} py-[6px] px-2 `}>
-                                    <tag.icon class="size-4" />
+                                <span class={`flex gap-x-2 rounded-lg text-xs sm:text-base lg:text-xs ${tag.class} py-[6px] px-2`}>
+                                    <tag.icon class="size-4 sm:size-6 lg:size-4" />
                                     {tag.name}
                                 </span>
                             </li>
@@ -207,10 +207,10 @@ const PROJECTS = [
                     </ul>
 
                     {/* Descripción */}
-                    <div class="mt-1 text-gray-700 text-pretty dark:text-gray-200 pr-4">{description}</div>
+                    <div class="text-base sm:text-lg md:text-xl lg:text-base mt-3 lg:mt-1 text-gray-700 text-pretty dark:text-gray-200 sm:pr-4">{description}</div>
 
                     {/* Botones */}
-                    <footer class="flex items-end justify-start mt-4 gap-x-4">
+                    <footer class="flex items-end justify-start text-sm sm:text-lg lg:text-base mt-8 lg:mt-4 gap-x-4">
                         {code && (
                             <SocialButton href={code}><GitHubIcon class="size-6" />Code</SocialButton>
                         )}

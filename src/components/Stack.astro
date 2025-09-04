@@ -173,26 +173,26 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 
     /* Override: en lg, la última .card-blue se comporta como .card-purple */
     @media (max-width: 1024px) {
-    .cards-row > .card-blue:last-child {
-        /* valores morados (iguales a los de .card-purple) */
-        --from: rgba(245,237,255,0.75);
-        --to: rgba(237,223,255,0.55);
-        --accent: #945dd6;
-        z-index: 2;
-    }
+        .cards-row > .card-blue:last-child {
+            /* Valores morados (iguales a los de .card-purple) */
+            --from: rgba(245,237,255,0.75);
+            --to: rgba(237,223,255,0.55);
+            --accent: #945dd6;
+            z-index: 2;
+        }
 
-    .cards-row > .card-blue:last-child:hover {
-        border: 1px solid rgba(229,214,255,0.95); /* o el color que prefieras */
-    }
+        .cards-row > .card-blue:last-child:hover {
+            border: 1px solid rgba(229,214,255,0.95);
+        }
 
-    :global(.dark) .cards-row > .card-blue:last-child {
-        --from: rgba(2,6,23,0.55);
-        --to: rgba(139,92,246,0.15);
-        --accent: #9d6ae6;
-    }
+        :global(.dark) .cards-row > .card-blue:last-child {
+            --from: rgba(2,6,23,0.55);
+            --to: rgba(139,92,246,0.15);
+            --accent: #9d6ae6;
+        }
 
-    :global(.dark) .cards-row > .card-blue:last-child:hover {
-        border: 1px solid rgb(142, 81, 255);
+        :global(.dark) .cards-row > .card-blue:last-child:hover {
+            border: 1px solid rgb(142, 81, 255);
+        }
     }
-}
 </style>
