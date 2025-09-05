@@ -1,46 +1,23 @@
-# Astro Starter Kit: Basics
+# Personal Portfolio
 
-```sh
-npm create astro@latest -- --template basics
-```
+![Hero del Portfolio](doc/Portfolio_screenshot_1.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Portfolio para mostrar mi perfil, mis proyectos destacados y el stack tecnológico que manejo. Cuenta con modo claro/oscuro y traducción dinámica entre español e inglés.
 
-## 🚀 Project Structure
+📌 https://emanuelgh.dev
 
-Inside of your Astro project, you'll see the following folders and files:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+<div align="center">
+    <p></p>
+    <img alt="Astro Badge" src="https://img.shields.io/badge/Astro-black?logo=astro&logoColor=white">
+    <img alt="React Badge" src="https://img.shields.io/badge/React-%23087EA4?logo=react&logoColor=white">
+    <img alt="Tailwind Badge" src="https://img.shields.io/badge/Tailwind%20CSS-%23003159?logo=tailwindcss&logoColor=%2338bdf8">
+    <img alt="TypeScript Badge" src="https://img.shields.io/badge/TypeScript-black?logo=typescript&logoColor=%232d79c7">
+    <img alt="JavaScript Badge" src="https://img.shields.io/badge/JavaScript-black?logo=javascript">
+    <p></p>
+</div>
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+![Proyectos del Portfolio](doc/Portfolio_screenshot_2.png)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+![Stack del Portfolio](doc/Portfolio_screenshot_3.png)
