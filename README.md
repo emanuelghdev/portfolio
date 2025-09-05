@@ -21,3 +21,8 @@ Portfolio para mostrar mi perfil, mis proyectos destacados y el stack tecnológi
 ![Proyectos del Portfolio](doc/Portfolio_screenshot_2.png)
 
 ![Stack del Portfolio](doc/Portfolio_screenshot_3.png)
+
+
+## 📄 Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE). Siéntete libre de usarlo y modificarlo a tu gusto, así como también es bienvenida cualquier contribución. No se requiere atribución, pero se agradece enormemente.
