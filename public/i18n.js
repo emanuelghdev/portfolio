@@ -94,7 +94,7 @@ var translations = {
       description3: "and agile methodologies. I am eager to take on new challenges that will allow me to grow both professionally and personally.",
       interests1: "I consider myself a meticulous and solution-oriented person with",
       interests2: "excellent communication and teamwork skills",
-      interests3: ", as well as a strong interest in free and open-source software, web accessibility and technological innovation."
+      interests3: ", as well as a strong interest in open-source software, web accessibility and technological innovation."
     },
     experience: {
       title: "Experience"

@@ -30,10 +30,76 @@ const t = getTranslations()
     </SocialButton>
     <SocialButton href="https://www.linkedin.com/in/emanuelgh"><LinkedInIcon class="size-5"/>LinkedIn</SocialButton>
     <SocialButton href="https://github.com/emanuelghdev"><GitHubIcon class="size-6"/>GitHub</SocialButton>
-    <SocialButton href="/Emanuel_CV.pdf" download="Emanuel_CV.pdf"><ResumeIcon class="size-6"/>
+    <SocialButton href="/Emanuel_Giraldo_Herrera_es.pdf" download="Emanuel_Giradlo_Herrera.pdf" id="resume-link" data-resume>
+        <ResumeIcon class="size-6"/>
         <span data-i18n="buttons.resume">{t.buttons.resume}</span>
     </SocialButton>
 </nav>
 
 <!-- Script para actualizar el idioma -->
 <script type="module" src="/i18n.js"></script>
+
+<!-- Script cliente que actualiza el enlace del CV según el idioma -->
+<script type="module">
+    // Función que decide la ruta y nombre según idioma
+    function resolvePdfForLang(lang) {
+        const low = (lang || '').toString().toLowerCase();
+        const isEn = low.startsWith('en');
+
+        return {
+            href: isEn ? '/Emanuel_Giraldo_Herrera_en.pdf' : '/Emanuel_Giraldo_Herrera_es.pdf',
+            download: isEn ? 'Emanuel_Giradlo_Herrera.pdf' : 'Emanuel_Giradlo_Herrera.pdf'
+        };
+    }
+
+    function updateResumeLink() {
+        // Buscamos el wrapper que marcamos con data-resume
+        const wrapper = document.querySelector('[data-resume]') || document.getElementById('resume-link');
+        if (!wrapper) return;
+
+        let anchor = (wrapper.tagName === 'A') ? wrapper : wrapper.querySelector('a');
+        if (!anchor) anchor = wrapper;
+
+        // Determinamos el idioma
+        const docLang = document.documentElement.lang || navigator.language || 'es';
+        const { href, download } = resolvePdfForLang(docLang);
+
+        // Actualizamos atributos
+        try {
+            anchor.setAttribute('href', href);
+            anchor.setAttribute('download', download);
+
+            // Aseguraramos que si el enlace se abre en nueva pestaña no quede inseguro
+            anchor.setAttribute('rel', anchor.getAttribute('rel') || 'noopener');
+        } catch (e) {
+            try {
+                wrapper.setAttribute('href', href);
+                wrapper.setAttribute('download', download);
+            } catch (e2) {
+                // Si aun así falla, no hacemos nada
+                console.warn('No se pudo actualizar el enlace del CV automáticamente.', e2);
+            }
+        }
+    }
+
+    // Ejecutar una vez al cargar el script
+    updateResumeLink();
+
+    // Escuchamos el evento
+    window.addEventListener('languageChange', (e) => {
+        const lang = e?.detail || null;
+        updateResumeLink(lang);
+    });
+
+    // Observador por si cambia document.documentElement.lang dinámicamente
+    const htmlEl = document.documentElement;
+    const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+            if (m.type === 'attributes' && m.attributeName === 'lang') {
+                updateResumeLink();
+            }
+        }
+    });
+
+    observer.observe(htmlEl, { attributes: true })
+</script>
