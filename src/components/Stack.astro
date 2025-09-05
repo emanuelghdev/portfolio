@@ -37,12 +37,15 @@ import AzureIcon from "./icons/AzureIcon.astro"
 import ScrumIcon from "./icons/ScrumIcon.astro"
 import JiraIcon from "./icons/JiraIcon.astro"
 import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
+import { getTranslations } from '../utils/i18n'
+
+const t = getTranslations()
 ---
 
 <!-- Header -->
 <header class="pt-6 pb-4 lg:pt-10 lg:pb-8">
     <h2 class="flex items-center justify-center gap-x-4 text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        <StackIcon class="size-16 lg:size-20" />My Stack
+        <StackIcon class="size-16 lg:size-20" /><span data-i18n="stack.title">{t.stack.title}</span>
     </h2>
 </header>
 
@@ -50,7 +53,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 <div class="max-w-7xl mx-auto space-y-12">
     <!-- Backend -->
     <div class="card-modern card-purple px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
-        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Backend</h3>
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+            <span data-i18n="stack.backend">{t.stack.backend}</span>
+        </h3>
         <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 ">
             <StackCard name="PHP"><PHPIcon class="size-10 overflow-visible"/></StackCard>
             <StackCard name="Python"><PythonIcon class="size-10"/></StackCard>
@@ -65,7 +70,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 
     <!-- Frontend & Design -->
     <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
-        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Frontend & Design</h3>
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+            <span data-i18n="stack.frontend">{t.stack.frontend}</span>
+        </h3>
         <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8">
             <StackCard name="JavaScript"><JavaScriptIcon class="size-10"/></StackCard>
             <StackCard name="TypeScript"><TypeScriptIcon class="size-10"/></StackCard>
@@ -86,7 +93,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 
     <!-- DevOps -->
     <div class="card-modern card-purple px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
-        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">DevOps</h3>
+        <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+            <span data-i18n="stack.devops">{t.stack.devops}</span>
+        </h3>
         <div class="grid grid-cols-3 gap-y-10 gap-4 sm:gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8">
             <StackCard name="Git"><GitIcon class="size-10"/></StackCard>
             <StackCard name="GitHub"><GitHubIcon class="size-10"/></StackCard>
@@ -100,9 +109,11 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
     </div>
 
     <div class="flex flex-col lg:flex-row gap-12 cards-row">
-        <!-- Management -->
+        <!-- Agile Practices -->
         <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
-            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Management</h3>
+            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+                <span data-i18n="stack.agile">{t.stack.agile}</span>
+            </h3>
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
                 <StackCard name="Scrum"><ScrumIcon class="size-10"/></StackCard>
                 <StackCard name="Jira"><JiraIcon class="size-10"/></StackCard>  
@@ -111,7 +122,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
 
         <!-- Game Dev -->
         <div class="card-modern card-blue px-3 py-5 sm:p-6 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out">
-            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Game Development</h3>
+            <h3 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
+                <span data-i18n="stack.gamedev">{t.stack.gamedev}</span>
+            </h3>
             <div class="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 lg:gap-15">
                 <StackCard name="Unity"><UnityIcon class="size-10"/></StackCard>
                 <StackCard name="AGS"><AGSIcon class="size-10"/></StackCard>
@@ -120,6 +133,9 @@ import GitHubActionsIcon from "./icons/GitHubActionsIcon.astro"
         </div>
     </div>
 </div>
+
+<!-- Script para actualizar el idioma -->
+<script type="module" src="/scripts/i18n-client.js"></script>
 
 <style>
     @reference "../styles/global.css";

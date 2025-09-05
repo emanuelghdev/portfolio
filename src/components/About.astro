@@ -1,20 +1,26 @@
 ---
 import AboutIcon from "./icons/AboutIcon.astro"
+import { getTranslations } from '../utils/i18n'
+
+const t = getTranslations()
 ---
 
 <!-- Header -->
 <header class="pt-6 pb-4 lg:pt-10 lg:pb-8">
     <h2 class="flex items-center justify-center gap-x-4 text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-        <AboutIcon class="size-16 lg:size-20" /> About Me
+        <AboutIcon class="size-16 lg:size-20" /><span data-i18n="about.title">{t.about.title}</span>
     </h2>
 </header>
 
 <!-- About me -->
 <article class="flex flex-col gap-y-6 lg:gap-y-8 mx-auto">
     <h3 class="text-xl lg:text-2xl opacity-80 dark:opacity-90 text-balance sm:text-pretty">
-        Ingeniero informático especializado en el desarrollo de software, con <span class="font-bold text-[#0053ff] dark:text-[#31d2f7]">amplia experiencia en programación web</span> y metodologías ágiles. <span class="hidden md:inline">Tengo muchas ganas de enfrentar nuevos retos que me permitan crecer tanto profesional como personalmente.</span>
+        <span data-i18n="about.description1">{t.about.description1}</span> <span class="font-bold text-[#0053ff] dark:text-[#31d2f7]" data-i18n="about.description2">{t.about.description2}</span> <span data-i18n="about.description3">{t.about.description3}</span>
     </h3>
     <h3 class="text-xl lg:text-2xl opacity-80 dark:opacity-90 text-balance sm:text-pretty">
-        Me considero una persona meticulosa y resolutiva, con <span class="font-bold text-[#831ffc] dark:text-[#b273ff]">excelentes habilidades comunicativas y de trabajo en equipo</span>, además de un interés especial en el software libre, la accesibilidad web y la innovación tecnológica.
+        <span data-i18n="about.interests1">{t.about.interests1}</span> <span class="font-bold text-[#831ffc] dark:text-[#b273ff]" data-i18n="about.interests2">{t.about.interests2}</span><span data-i18n="about.interests3">{t.about.interests3}</span>
     </h3>
 </article>
+
+<!-- Script para actualizar el idioma -->
+<script type="module" src="/scripts/i18n-client.js"></script>

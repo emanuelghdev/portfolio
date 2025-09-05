@@ -18,6 +18,9 @@ import MySQLIcon from "./icons/MySQLIcon.astro"
 import WebGLIcon from "./icons/WebGLIcon.astro"
 import ThreejsIcon from "./icons/ThreejsIcon.astro"
 import RolIcon from "./icons/RolIcon.astro"
+import { getTranslations } from '../utils/i18n'
+
+const t = getTranslations()
 
 const TAGS = {
     JAVACRIPT: {
@@ -95,60 +98,50 @@ const TAGS = {
 const PROJECTS = [
     {
         title: "Aprendefacil",
-        description: "Plataforma web para el Colegio de Educación Especial San Rafael destinada a ayudar alumnos con diversidad funcional a ganar independencia mediante agendas visuales, tareas adaptadas y comunicación directa con los educadores.",
-        info: "⭐ Piloto para una licitación que acabámos ganando",
+        name: "aprendefacil",
         code: "https://github.com/emanuelghdev/aprendefacil",
         image: "src/assets/Projects/Aprendefacil.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
-        rol: "Auditor de Accesibilidad / Backend Developer",
         direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
     {
         title: "Una Habitación Propia",
-        description: "Juego pixel art 2D de gestión emocional y granjas enfocado en la mejora de los problemas producidos por la ansiedad y el estrés. Cuenta con árbol de diálogos, sistema de progreso, NPCs con arcos narrativos y misiones secundarias.",
-        info: "🎯 Trabajo final de carrera calificado con la máxima nota",
+        name: "habitacionpropia",
         code: "https://github.com/emanuelghdev/una-habitacion-propia",
         link: "https://emanuelgh.itch.io/una-habitacion-propia",
         image: "src/assets/Projects/Una_habitacion_propia.png",
         tags: [TAGS.UNITY, TAGS.CSHARP, TAGS.ASEPRITE],
-        rol: "Full-Stack Developer",
         direction: "lg:flex-row-reverse",
         fondo: "card-modern card-purple",
     },
     {
         title: "Palestine Support Badges",
-        description: "Herramienta web para crear badges de apoyo a Palestina personalizables con diferentes estilos, colores, textos e iconos. Permite exportar los badges en formatos como Markdown, HTML o PNG listos para usar.",
-        info: "🍉 Proyecto perteneciente a la iniciativa Tech4Palestine",
+        name: "palestinebadges",
         code: "https://github.com/emanuelghdev/palestine-support-badges",
         link: "https://emanuelghdev.github.io/palestine-support-badges/",
         image: "src/assets/Projects/Palestine_badges.png",
         tags: [TAGS.JAVACRIPT, TAGS.REACT, TAGS.TAILWIND],
-        rol: "Teach Lead",
         direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
     {
         title: "The Dim Room",
-        description: "Escape Room interactivo que transcurre en una pequeña habitación 3D hecha desde cero. El usuario puede explorar la escena, interactuar con los objetos e intentar descubrir todas las pistas necesarias para salir de la habitación.",
-        info: "💡 Escena con +25 objetos distintos modelados",
+        name: "dimroom",
         code: "https://github.com/emanuelghdev/the-dim-room",
         link: "https://emanuelghdev.github.io/the-dim-room/",
         image: "src/assets/Projects/The_dim_room.png",
         tags: [TAGS.JAVACRIPT, TAGS.THREEJS, TAGS.WEBGL],
-        rol: "Full-Stack Developer",
         direction: "lg:flex-row-reverse",
         fondo: "card-modern card-purple",
     },
     {
         title: "Refrandle",
-        description: "Juego online de adivinar refranes y dichos populares en español. Incluye estadísticas detalladas, historial de partidas y hasta cuatro modos de juego distintos para ajustar la experiencia.",
-        info: "📈 Web app con +20.000 partidas jugadas",
+        name: "refrandle",
         code: "https://github.com/emanuelghdev/refrandle",
         link: "https://refrandle.es/",
         image: "src/assets/Projects/Refrandle.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP, TAGS.JAVACRIPT, TAGS.MYSQL],
-        rol: "Full-Stack Developer",
         direction: "lg:flex-row",
         fondo: "card-modern card-blue",
     },
@@ -158,13 +151,13 @@ const PROJECTS = [
 <!-- Header -->
 <header class="pt-6 pb-4 lg:pt-10 lg:pb-8">
     <h2 class="flex items-center justify-center gap-x-4 text-3xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
-        <ProjectsIcon class="size-16 lg:size-20" />Featured Projects
+        <ProjectsIcon class="size-16 lg:size-20" /><span data-i18n="projects.title">{t.projects.title}</span>
     </h2>
 </header>
 
 <!-- Proyectos -->
 <div class="flex flex-col gap-y-16 md:gap-y-14">
-    {PROJECTS.map(({ direction, fondo, info, image, title, description, tags, link, code, rol }) => (
+    {PROJECTS.map(({ direction, fondo, image, title, name, tags, link, code }) => (
         <article class={`flex flex-col gap-4 justify-center space-x-0 space-y-8 group ${direction} md:space-x-8 md:space-y-0 md:hover:-translate-y-4 hover:shadow-md transition duration-300 ease-in-out p-5 ${fondo}`}>
             <div class="w-full lg:w-1/2 m-0">
 
@@ -173,15 +166,15 @@ const PROJECTS = [
 
                     {/* Popup información adicional */}
                     <span class="absolute bottom-3 left-3 opacity-0 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-300 delay-100 rounded-full backdrop-blur-sm z-10">
-                        <span class="px-2 py-1 bg-black/60 border border-white/20 text-white text-sm sm:text-base lg:text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto">
-                            {info}
+                        <span class="px-2 py-1 bg-black/60 border border-white/20 text-white text-sm sm:text-base lg:text-sm font-medium rounded-full" aria-label="Información adicional sobre el proyecto" data-i18n={`projectsData.${name}.info`}>
+                            {`t.projectsData.${name}.info`}
                         </span>
                     </span>
 
                     {/* Popup rol en el proyecto */}
                     <span class="absolute bottom-9 left-3 opacity-0 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-2 lg:group-hover:translate-y-0 transition-all duration-300 delay-200 rounded-full backdrop-blur-sm z-10">
                         <span class="inline-flex items-center gap-2 px-2 py-1 rounded-full text-xs sm:text-sm lg:text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-indigo-100 via-indigo-50 to-white text-indigo-800  max-w-fit" aria-label="Rol en el proyecto">
-                            <RolIcon class="size-5" />{rol}
+                            <RolIcon class="size-5" /><span data-i18n={`projectsData.${name}.rol`}>{`t.projectsData.${name}.rol`}</span>
                         </span>
                     </span>
 
@@ -207,15 +200,19 @@ const PROJECTS = [
                     </ul>
 
                     {/* Descripción */}
-                    <div class="text-base sm:text-lg md:text-xl lg:text-base mt-3 lg:mt-1 text-gray-700 text-pretty dark:text-gray-200 sm:pr-4">{description}</div>
+                    <div class="text-base sm:text-lg md:text-xl lg:text-base mt-3 lg:mt-1 text-gray-800 text-pretty dark:text-gray-200 sm:pr-4" data-i18n={`projectsData.${name}.description`}>{`t.projectsData.${name}.description`}</div>
 
                     {/* Botones */}
-                    <footer class="flex items-end justify-start text-sm sm:text-lg lg:text-base mt-8 lg:mt-4 gap-x-4">
+                    <footer class="flex items-end justify-start text-sm sm:text-lg lg:text-base mt-8 lg:mt-[0.9rem] gap-x-4">
                         {code && (
-                            <SocialButton href={code}><GitHubIcon class="size-6" />Code</SocialButton>
+                            <SocialButton href={code}><GitHubIcon class="size-6" />
+                                <span data-i18n="projects.code">{t.projects.code}</span>
+                            </SocialButton>
                         )}
                         {link && (
-                            <SocialButton href={link}><PreviewIcon class="size-6" />Preview</SocialButton>
+                            <SocialButton href={link}><PreviewIcon class="size-6" />
+                                <span data-i18n="projects.preview">{t.projects.preview}</span>
+                            </SocialButton>
                         )}
                     </footer>
                 </div>
@@ -223,6 +220,9 @@ const PROJECTS = [
         </article>
     ))}
 </div>
+
+<!-- Script para actualizar el idioma -->
+<script type="module" src="/scripts/i18n-client.js"></script>
 
 <style>
     @reference "../styles/global.css";

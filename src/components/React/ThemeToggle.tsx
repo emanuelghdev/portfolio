@@ -35,10 +35,10 @@ const ThemeToggle = () => {
     }
 
     return (
-        <button onClick={toggleTheme} className="text-gray-700 hover:text-black dark:text-gray-200 dark:hover:text-white relative p-2 rounded-full transition-colors duration-300 cursor-pointer" aria-label="Cambiar tema">
+        <button onClick={toggleTheme} className="text-gray-700 hover:text-black dark:text-gray-200 dark:hover:text-white relative p-2 rounded-full transition-colors duration-300 cursor-pointer group" aria-label="Cambiar tema">
         {/* Sol (modo claro) */}
         <svg
-            className={`w-5 h-5 transition-all duration-300 ${ isDark ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'} absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+            className={`w-5 h-5 transition-all duration-300 ${ isDark ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'} absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:rotate-90`}
             fill="currentColor"
             viewBox="0 0 20 20"
         >
@@ -47,7 +47,7 @@ const ThemeToggle = () => {
         
         {/* Luna (modo oscuro) */}
         <svg
-            className={`w-5 h-5 transition-all duration-300 ${ isDark ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0' } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2`}
+            className={`w-5 h-5 transition-all duration-300 ${ isDark ? 'rotate-0 opacity-100' : '-rotate-90 opacity-0' } absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group-hover:-rotate-90`}
             fill="currentColor"
             viewBox="0 0 20 20"
         >

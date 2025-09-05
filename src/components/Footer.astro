@@ -1,32 +1,54 @@
 ---
+import SocialButton from "./SocialButton.astro"
+import GitHubIcon from "./icons/GitHubIcon.astro"
+import LinkedInIcon from "./icons/LinkedInIcon.astro"
+import MailIcon from "./icons/MailIcon.astro"
+import ResumeIcon from "./icons/ResumeIcon.astro"
+import { getTranslations } from '../utils/i18n'
+
+const t = getTranslations()
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-8 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
+<!-- Botones contacto -->
+<nav class="flex flex-wrap md:flex-row justify-center gap-x-2 lg:gap-x-4 gap-y-4 mt-4 lg:mt-8">
+    <SocialButton href="mailto:emanuelghdev@gmail.com"><MailIcon class="size-6"/>
+        <span data-i18n="buttons.contact">{t.buttons.contact}</span>
+    </SocialButton>
+    <SocialButton href="https://www.linkedin.com/in/emanuelgh"><LinkedInIcon class="size-5"/>LinkedIn</SocialButton>
+    <SocialButton href="https://github.com/emanuelghdev"><GitHubIcon class="size-6"/>GitHub</SocialButton>
+    <SocialButton href="/Emanuel_CV.pdf" download="Emanuel_CV.pdf"><ResumeIcon class="size-6"/>
+        <span data-i18n="buttons.resume">{t.buttons.resume}</span>
+    </SocialButton>
+</nav>
+
+<footer class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-12 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
     <div class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 mb-2">
         <!-- Copyright -->
         <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90">&copy; {currentYear}
-            <a href="#">Emanuel Giraldo Herrera</a>. <span class="hidden lg:inline-block"> Los logos y marcas registradas pertenecen a sus respectivos dueños.</span>
+            <a href="#">Emanuel Giraldo Herrera</a>. <span class="hidden lg:inline-block" data-i18n="footer.rights">{t.footer.rights}</span>
         </span>
 
         <!-- Links -->
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0">
             <li>
-                <a href="/#about" class="me-4 md:me-6">Sobre mí</a>
+                <a href="/#about" class="me-4 md:me-6"><span data-i18n="footer.about">{t.footer.about}</span></a>
             </li>
             <li>
-                <a id="contacto" href="mailto:emanuelghdev@gmail.com">Contacto</a>
+                <a id="contacto" href="mailto:emanuelghdev@gmail.com"><span data-i18n="footer.contact">{t.footer.contact}</span></a>
             </li>
         </ul>
     </div>
 </footer>
 
+<!-- Script para actualizar el idioma -->
+<script type="module" src="/scripts/i18n-client.js"></script>
 
 <style>
     @reference "../styles/global.css";
 
     /* Estilo enlaces */
-    a {
+    footer a {
         @apply relative text-gray-800 dark:text-zinc-200 hover:text-black dark:hover:text-white transition-colors duration-200 after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-black dark:after:bg-white after:transition-all after:duration-300 hover:after:w-full;
     }
 </style>

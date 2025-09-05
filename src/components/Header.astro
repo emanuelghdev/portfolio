@@ -1,19 +1,28 @@
 ---
 import ThemeToggle from './React/ThemeToggle.tsx'
+import LanguageToggle from '../components/React/LanguageToggle.tsx'
+import { getTranslations } from '../utils/i18n'
+
+const t = getTranslations()
 ---
 
-<header class="glass fixed flex justify-center items-center px-6 py-4 w-fit mx-auto mt-4 lg:mt-6 shadow-[2px_3px_5px_0px_#add8e6] dark:shadow-[2px_3px_5px_0px_rgba(120,119,198,0.3)] z-[99]">
+<!-- Header -->
+<header class="glass fixed flex justify-between items-center px-6 py-4 w-fit md:w-xl lg:w-3xl mx-auto mt-4 lg:mt-6 shadow-[2px_3px_5px_0px_#add8e6] dark:shadow-[2px_3px_5px_0px_rgba(120,119,198,0.3)] z-[99]">
     <nav class="flex flex-row gap-x-6 sm:gap-x-8 lg:gap-x-10">
-        <a href="#top">Home</a>
-        <a href="#about">About</a>
-        <!-- <a href="#experience">Experience</a> -->
-        <a href="#projects">Projects</a>
-        <a href="#stack">Stack</a>
-        <span class="flex pb-[2px]">
-            <ThemeToggle client:load />
-        </span>
+        <a href="#top" data-i18n="nav.home">{t.nav.home}</a>
+        <a href="#about" data-i18n="nav.about">{t.nav.about}</a>
+        <!-- <a href="#experience" data-i18n="nav.experience">{t.nav.experience}</a> -->
+        <a href="#projects" data-i18n="nav.projects">{t.nav.projects}</a>
+        <a href="#stack" data-i18n="nav.stack">{t.nav.stack}</a>
     </nav>
+    <span class="hidden md:flex flex-row gap-x-8 lg:gap-x-10 pb-[2px]">
+        <ThemeToggle client:load />
+        <LanguageToggle client:load />
+    </span>
 </header>
+
+<!-- Script para actualizar el idioma -->
+<script type="module" src="/scripts/i18n-client.js"></script>
 
 <style>
     @reference "../styles/global.css";

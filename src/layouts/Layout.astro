@@ -17,7 +17,9 @@ import '@fontsource-variable/cabin'
 		<meta name="generator" content={Astro.generator} />
 		<title>Emanuel Giraldo - Full Stack Developer</title>
 
+		<!-- Scripts para prevenir parpadeo de tema e idioma -->
 		<script is:inline>
+			// Prevenir parpadeo del tema
 			(function() {
 				const savedTheme = localStorage.getItem('theme')
 				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -27,6 +29,12 @@ import '@fontsource-variable/cabin'
 				} else {
 					document.documentElement.classList.remove('dark')
 				}
+			})();
+
+			// Prevenir parpadeo del idioma
+			(function() {
+				const savedLang = localStorage.getItem('language') || (navigator.language.startsWith('es') ? 'es' : 'en');
+				document.documentElement.lang = savedLang;
 			})();
 		</script>
 	</head>
