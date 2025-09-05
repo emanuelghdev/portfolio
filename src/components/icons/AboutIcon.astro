@@ -1,1 +1,5 @@
-<img src="src/assets/Lamp3D.webp" alt="3D model of a lamp" {...Astro.props} />
+---
+import lampImg from "../../assets/Lamp3D.webp?url"
+---
+
+<img src={lampImg} alt="3D model of a lamp" {...Astro.props} />

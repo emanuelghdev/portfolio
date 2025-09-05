@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:i18n": "esbuild src/scripts/i18n-entry.js --bundle --format=esm --outfile=public/i18n.js"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
@@ -24,5 +25,8 @@
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.12",
     "three": "^0.179.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
   }
 }

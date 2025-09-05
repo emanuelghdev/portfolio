@@ -1,4 +1,4 @@
-import { getTranslations } from '/src/utils/i18n.js'
+import { getTranslations } from '../utils/i18n';
 
 function updateTexts(lang) {
     const currentLang = lang || localStorage.getItem('language') || 'es'

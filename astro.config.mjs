@@ -9,7 +9,14 @@ import react from '@astrojs/react';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
-    assetsInclude: ['**/*.glb']
+    assetsInclude: ['**/*.glb'],
+    build: {
+      rollupOptions: {
+        input: {
+          'i18n': './src/scripts/i18n-entry.js',
+        },
+      },
+    }
   },
 
   integrations: [react()]
