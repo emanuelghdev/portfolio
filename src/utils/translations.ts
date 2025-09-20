@@ -8,6 +8,10 @@ export interface Translations {
         projects: string
         stack: string
     }
+    icons: {
+        switchToDark: string
+        switchToLight: string
+    }
     buttons: {
         contact: string
         resume: string
@@ -84,6 +88,10 @@ export const translations: Record<Language, Translations> = {
             projects: "Proyectos",
             stack: "Stack"
         },
+        icons: {
+            switchToDark: "Cambiar a modo oscuro",
+            switchToLight: "Cambiar a modo claro"
+        },
         buttons: {
             contact: "Contáctame",
             resume: "Descargar CV"
@@ -159,6 +167,10 @@ export const translations: Record<Language, Translations> = {
             experience: "Experience",
             projects: "Projects",
             stack: "Stack"
+        },
+        icons: {
+            switchToDark: "Switch to dark mode",
+            switchToLight: "Switch to light mode"
         },
         buttons: {
             contact: "Contact me",

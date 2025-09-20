@@ -9,6 +9,10 @@ var translations = {
       projects: "Proyectos",
       stack: "Stack"
     },
+    icons: {
+      switchToDark: "Cambiar a modo oscuro",
+      switchToLight: "Cambiar a modo claro"
+    },
     buttons: {
       contact: "Cont\xE1ctame",
       resume: "Descargar CV"
@@ -82,6 +86,10 @@ var translations = {
       experience: "Experience",
       projects: "Projects",
       stack: "Stack"
+    },
+    icons: {
+      switchToDark: "Switch to dark mode",
+      switchToLight: "Switch to light mode"
     },
     buttons: {
       contact: "Contact me",
